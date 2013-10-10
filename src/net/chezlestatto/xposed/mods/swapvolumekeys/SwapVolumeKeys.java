@@ -55,7 +55,9 @@ public class SwapVolumeKeys implements IXposedHookZygoteInit, IXposedHookLoadPac
 	private void hook(MethodHookParam param) {
 		if ((Integer) param.args[0] != 0) {
 			int orientation = getScreenOrientation(param.thisObject);
-			if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+			boolean landscapeAsDefault = prefs.getBoolean("pref_landscape_mode_as_default", false);
+			if ((!landscapeAsDefault && (orientation == Configuration.ORIENTATION_LANDSCAPE))
+			||  (landscapeAsDefault && (orientation == Configuration.ORIENTATION_PORTRAIT))) {
 				param.args[0] = -1 * (Integer) param.args[0];
 			}
 		}

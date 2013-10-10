@@ -1,5 +1,11 @@
 <resources>
 
-    <string name="app_name">Swap Volume Keys</string>
+	<!-- Mod Information -->
+	<string name="app_name">Swap Volume Keys</string>
+	<string name="xposed_description">Swap volume keys when in Landscape mode.</string>
+
+	<!-- Preference Screen -->
+	<string name="pref_options_title">Options</string>
+	<string name="pref_landscape_mode_as_default_title">Landscape mode as default</string>
 
 </resources>
