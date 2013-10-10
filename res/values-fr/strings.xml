@@ -1,0 +1,11 @@
+<resources>
+
+	<!-- Mod Information -->
+	<string name="app_name">Intervertit les touches de volume</string>
+	<string name="xposed_description">Intervertit les touches de volume si l\'orientation est différente du mode par défaut.</string>
+
+	<!-- Preference Screen -->
+	<string name="pref_options_title">Réglages</string>
+	<string name="pref_landscape_mode_as_default_title">Mode Paysage par défaut</string>
+
+</resources>

@@ -2,7 +2,7 @@
 
 	<!-- Mod Information -->
 	<string name="app_name">Swap Volume Keys</string>
-	<string name="xposed_description">Swap volume keys when in Landscape mode.</string>
+	<string name="xposed_description">Swap volume keys if not in the default orientation.</string>
 
 	<!-- Preference Screen -->
 	<string name="pref_options_title">Options</string>
