@@ -2,5 +2,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
     <PreferenceCategory android:title="@string/pref_options_title" android:key="pref_options">
         <CheckBoxPreference android:key="pref_landscape_mode_as_default" android:defaultValue="false" android:title="@string/pref_landscape_mode_as_default_title"/>
+        <CheckBoxPreference android:key="pref_enable_logging" android:defaultValue="false" android:title="@string/pref_enable_logging_title"/>
     </PreferenceCategory>
 </PreferenceScreen>
