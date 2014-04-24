@@ -11,6 +11,7 @@ import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XC_MethodHook.MethodHookParam;
 import de.robv.android.xposed.XSharedPreferences;
+import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
 
 public class SwapVolumeKeys implements IXposedHookZygoteInit, IXposedHookLoadPackage {
@@ -30,8 +31,8 @@ public class SwapVolumeKeys implements IXposedHookZygoteInit, IXposedHookLoadPac
 		prefs.reload();
 
 		if (lpparam.packageName.equals("android")) {
-			findAndHookMethod("android.media.AudioService", lpparam.classLoader, "adjustMasterVolume", int.class, int.class, AudioService_adjustMasterVolume);
-			findAndHookMethod("android.media.AudioService", lpparam.classLoader, "adjustSuggestedStreamVolume", int.class, int.class, int.class, AudioService_adjustSuggestedStreamVolume);
+			findAndHookMethod("android.media.AudioService", lpparam.classLoader, "adjustMasterVolume", int.class, int.class, String.class, AudioService_adjustMasterVolume);
+			findAndHookMethod("android.media.AudioService", lpparam.classLoader, "adjustSuggestedStreamVolume", int.class, int.class, int.class, String.class, AudioService_adjustSuggestedStreamVolume);
 		}
 
 	}

@@ -19,6 +19,7 @@ public class SwapVolumeKeysSettings extends Activity {
 
 	public static class PrefsFragment extends PreferenceFragment {
 
+		@SuppressWarnings("deprecation")
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
