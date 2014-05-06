@@ -31,7 +31,7 @@ public class SwapVolumeKeys implements IXposedHookZygoteInit, IXposedHookLoadPac
 
 		if (lpparam.packageName.equals("android")) {
 			int currentApiVersion = android.os.Build.VERSION.SDK_INT;
-			if (currentApiVersion <= 17) {
+			if (currentApiVersion < 19) {
 				findAndHookMethod("android.media.AudioService", lpparam.classLoader, "adjustMasterVolume", int.class, int.class, AudioService_adjustMasterVolume);
 				findAndHookMethod("android.media.AudioService", lpparam.classLoader, "adjustSuggestedStreamVolume", int.class, int.class, int.class, AudioService_adjustSuggestedStreamVolume);
 			} else {
